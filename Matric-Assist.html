@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function changeQuote() {
+            const quotes = [
+                "The only way to do great work is to love what you do. - Steve Jobs",
+                "Success is not the key to happiness. Happiness is the key to success. - Albert Schweitzer",
+                "Don’t watch the clock; do what it does. Keep going. - Sam Levenson"
+            ];
+            const quoteElement = document.getElementById('quote');
+            quoteElement.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+        window.onload = changeQuote;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Educational Hub</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#science">Science</a>
+        <a href="#commerce">Commerce</a>
+        <a href="#technical">Technical</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About Us</a>
+    </nav>
+    <div class="container" id="home">
+        <h2>What We Offer</h2>
+        <p>Explore our range of subjects:</p>
+        <ul>
+            <li>Science</li>
+            <li>Commerce</li>
+            <li>Technical</li>
+        </ul>
+        <div class="quote" id="quote"></div>
+    </div>
+    <div class="container" id="science">
+        <h2>Science Subjects</h2>
+        <ul>
+            <li>Physical Sciences</li>
+            <li>Mathematics</li>
+            <li>Life Science</li>
+            <li>Agriculture</li>
+            <li>Geography</li>
+        </ul>
+    </div>
+    <div class="container" id="commerce">
+        <h2>Commerce Subjects</h2>
+        <ul>
+            <li>Economics</li>
+            <li>Accounting</li>
+            <li>Business Studies</li>
+        </ul>
+    </div>
+    <div class="container" id="technical">
+        <h2>Technical Subjects</h2>
+        <ul>
+            <li>Technical Maths</li>
+            <li>Technical Sciences</li>
+            <li>Engineering and Design</li>
+            <li>Civil Wood Working</li>
+        </ul>
+    </div>
+    <div class="container" id="videos">
+        <h2>Videos</h2>
+        <p>Explore educational videos for different subjects here.</p>
+        <!-- Video section will be dynamically added -->
+    </div>
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <p>We are a team dedicated to providing educational resources:</p>
+        <ul>
+            <li>Siphumelele Sheyi</li>
+            <li>Axhoba Ntoni</li>
+            <li>Zizipho Mkungwana</li>
+            <li>Mihlali Mbhedeni</li>
+            <li>Malwande Mdzobo</li>
+        </ul>
+    </div>
+    <footer>
+        <div class="container">
+            <input type="text" id="search" placeholder="Search...">
+            <button onclick="searchSite()">Search</button>
+        </div>
+    </footer>
+    <script>
+        function searchSite() {
+            let query = document.getElementById('search').value;
+            alert('Search functionality is under development. You searched for: ' + query);
+        }
+    </script>
+</body>
+</html>
