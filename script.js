@@ -42,16 +42,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("quote").textContent = getRandomQuote();
   }, 10000);
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
 
-const tabs = document.querySelectorAll(".tab-button");
-const contents = document.querySelectorAll(".tab-content");
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const targetTab = this.getAttribute("data-tab");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((t) => t.classList.remove("active"));
-    contents.forEach((c) => c.classList.remove("active"));
+      // Remove active class from all buttons and content
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabContents.forEach((content) => content.classList.remove("active"));
 
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.tab).classList.add("active");
+      // Add active class to the clicked button and corresponding content
+      this.classList.add("active");
+      const targetContent = document.getElementById(targetTab);
+      if (targetContent) {
+        targetContent.classList.add("active");
+      }
+    });
   });
 });
