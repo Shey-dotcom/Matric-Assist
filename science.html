@@ -1,287 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Science</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="page-container">    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>            
-            <li><a href="commerce.html">Commerce</a></li>
-            <li><a href="technical.html">Technical</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // JavaScript to handle tab switching
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".tab-button");
+        const iframe = document.getElementById("content-frame");
 
-    <header>
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            buttons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to the clicked button
+            button.classList.add("active");
+            // Change iframe source based on data-tab
+            const year = button.getAttribute("data-tab");
+            iframe.src = `science_${year}.html`;
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="page-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="commerce.html">Commerce</a></li>
+          <li><a href="technical.html">Technical</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+
+      <header>
         <h1>Science</h1>
-    </header>
+      </header>
 
-    <div class="tabs">
-      <button class="tab-button active" data-tab="2021">2021</button>
-      <button class="tab-button" data-tab="2022">2022</button>
-      <button class="tab-button" data-tab="2023">2023</button>
-  </div>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="2021">2021</button>
+        <button class="tab-button" data-tab="2022">2022</button>
+        <button class="tab-button" data-tab="2023">2023</button>
+      </div>
 
-  <div id="2021" class="tab-content active">   
-    <div class="content-container">
-        <div class="content-column">
-    <section>          
-        <p style="font-weight: bold;">Below are the Question Papers for May-June 2021:</p> 
-        <p>Agricultural Sciences:</p>   
-        <ul>
-            <li><a href="pdfs/June 2021/Agricultural Sciences P1 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color: #000000; font-weight: bold;">Agricultural Sciences P1 May-June 2021</a></li>    
-            <li><a href="pdfs/June 2021/Agricultural Sciences P2 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 May-June 2021</a></li>
-        </ul>
-        <p>Geography:</p> 
-        <ul> 
-            <li><a href="pdfs/June 2021/Geography P1 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 May-June 2021</a></li>
-            <li><a href="pdfs/June 2021/Geography P2 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 May-June 2021</a></li>
-        </ul>
-        <p>Life Sciences:</p>
-        <ul>
-            <li><a href="pdfs/June 2021/Life Sciences P1 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 May-June 2021</a></li>
-            <li><a href="pdfs/June 2021/Life Sciences P2 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 May-June 2021</a></li>           
-        </ul>
-        <p>Mathematics:</p>
-        <ul>
-            <li><a href="pdfs/June 2021/Mathematics P1 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 May-June 2021</a></li>
-            <li><a href="pdfs/June 2021/Mathematics P2 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 May-June 2021</a></li>
-        </ul>
-        <p>Physical Sciences:</p>
-        <ul>
-            <li><a href="pdfs/June 2021/Physical Sciences P1 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 May-June 2021</a></li>
-            <li><a href="pdfs/June 2021/Physical Sciences P2 May-June 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 May-June 2021</a></li>
-        </ul>  
-    </section>
-
-    <section style="margin-top: -60px;">
-      <p style="font-weight: bold;">Below are the Memos for May-June 2021:</p>     
-      <p>Agricultural Sciences:</p>   
-      <ul>
-          <li><a href="pdfs/June 2021/Agricultural Sciences P1 May-June 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P1 May-June 2021</a></li>    
-          <li><a href="pdfs/June 2021/Agricultural Sciences P2 May-June 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 May-June 2021</a></li>
-      </ul>
-      <p>Geography:</p> 
-      <ul> 
-          <li><a href="pdfs/June 2021/Geography P1 May-June 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 May-June 2021</a></li>
-          <li><a href="pdfs/June 2021/Geography P2 May-June 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 May-June 2021</a></li>
-      </ul>
-      <p>Life Sciences:</p>
-      <ul>
-          <li><a href="pdfs/June 2021/Life Sciences P1 May-June 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 May-June 2021</a></li>
-          <li><a href="pdfs/June 2021/Life Sciences P2 May-June 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 May-June 2021</a></li>           
-      </ul>
-      <p>Mathematics:</p>
-      <ul>
-          <li><a href="pdfs/June 2021/Mathematics P1 May-June 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 May-June 2021</a></li>
-          <li><a href="pdfs/June 2021/Mathematics P2 May-June 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 May-June 2021</a></li>
-      </ul>
-      <p>Physical Sciences:</p>
-      <ul>
-          <li><a href="pdfs/June 2021/Physical Sciences P1 May-June 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 May-June 2021</a></li>
-          <li><a href="pdfs/June 2021/Physical Sciences P2 May-June 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 May-June 2021</a></li>
-      </ul>
-  </section>
-</div>
-  <div class="content-column">
- <section>          
-        <p style="font-weight: bold;">Below are the Question Papers for Nov 2021:</p> 
-        <p>Agricultural Sciences:</p>   
-        <ul>
-            <li><a href="pdfs/Nov 2021/Agricultural Sciences P1 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color: #000000; font-weight: bold;">Agricultural Sciences P1 Nov 2021</a></li>    
-            <li><a href="pdfs/Nov 2021/Agricultural Sciences P2 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 Nov 2021</a></li>
-        </ul>
-        <p>Geography:</p> 
-        <ul> 
-            <li><a href="pdfs/Nov 2021/Geography P1 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 Nov 2021</a></li>
-            <li><a href="pdfs/Nov 2021/Geography P2 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 Nov 2021</a></li>
-        </ul>
-        <p>Life Sciences:</p>
-        <ul>
-            <li><a href="pdfs/Nov 2021/Life Sciences P1 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 Nov 2021</a></li>
-            <li><a href="pdfs/Nov 2021/Life Sciences P2 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 Nov 2021</a></li>           
-        </ul>
-        <p>Mathematics:</p>
-        <ul>
-            <li><a href="pdfs/Nov 2021/Mathematics P1 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 Nov 2021</a></li>
-            <li><a href="pdfs/Nov 2021/Mathematics P2 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 Nov 2021</a></li>
-        </ul>
-        <p>Physical Sciences:</p>
-        <ul>
-            <li><a href="pdfs/Nov 2021/Physical Sciences P1 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 Nov 2021</a></li>
-            <li><a href="pdfs/Nov 2021/Physical Sciences P2 Nov 2021 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 Nov 2021</a></li>
-        </ul>  
-    </section>
-
-    <section style="margin-top: -60px;">
-      <p style="font-weight: bold;">Below are the Memos for Nov 2021:</p>     
-      <p>Agricultural Sciences:</p>   
-      <ul>
-          <li><a href="pdfs/Nov 2021/Agricultural Sciences P1 Nov 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P1 Nov 2021</a></li>    
-          <li><a href="pdfs/Nov 2021/Agricultural Sciences P2 Nov 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 Nov 2021</a></li>
-      </ul>
-      <p>Geography:</p> 
-      <ul> 
-          <li><a href="pdfs/Nov 2021/Geography P1 Nov 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 Nov 2021</a></li>
-          <li><a href="pdfs/Nov 2021/Geography P2 Nov 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 Nov 2021</a></li>
-      </ul>
-      <p>Life Sciences:</p>
-      <ul>
-          <li><a href="pdfs/Nov 2021/Life Sciences P1 Nov 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 Nov 2021</a></li>
-          <li><a href="pdfs/Nov 2021/Life Sciences P2 Nov 2021 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 Nov 2021</a></li>           
-      </ul>
-      <p>Mathematics:</p>
-      <ul>
-          <li><a href="pdfs/Nov 2021/Mathematics P1 Nov 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 Nov 2021</a></li>
-          <li><a href="pdfs/Nov 2021/Mathematics P2 Nov 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 Nov 2021</a></li>
-      </ul>
-      <p>Physical Sciences:</p>
-      <ul>
-          <li><a href="pdfs/Nov 2021/Physical Sciences P1 Nov 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 Nov 2021</a></li>
-          <li><a href="pdfs/Nov 2021/Physical Sciences P2 Nov 2021 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 Nov 2021</a></li>
-      </ul>
-  </section>
-  </div>
-    
-  <div id="2022" class="tab-content">
-    <div class="content-container">
-        <div class="content-column">
-    <section>          
-        <p style="font-weight: bold;">Below are the Question Papers for May-June 2022:</p> 
-        <p>Agricultural Sciences:</p>   
-        <ul>
-            <li><a href="pdfs/June 2022/Agricultural Sciences P1 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color: #000000; font-weight: bold;">Agricultural Sciences P1 May-June 2022</a></li>    
-            <li><a href="pdfs/June 2022/Agricultural Sciences P2 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 May-June 2022</a></li>
-        </ul>
-        <p>Geography:</p> 
-        <ul> 
-            <li><a href="pdfs/June 2022/Geography P1 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 May-June 2022</a></li>
-            <li><a href="pdfs/June 2022/Geography P2 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 May-June 2022</a></li>
-        </ul>
-        <p>Life Sciences:</p>
-        <ul>
-            <li><a href="pdfs/June 2022/Life Sciences P1 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 May-June 2022</a></li>
-            <li><a href="pdfs/June 2022/Life Sciences P2 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 May-June 2022</a></li>           
-        </ul>
-        <p>Mathematics:</p>
-        <ul>
-            <li><a href="pdfs/June 2022/Mathematics P1 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 May-June 2022</a></li>
-            <li><a href="pdfs/June 2022/Mathematics P2 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 May-June 2022</a></li>
-        </ul>
-        <p>Physical Sciences:</p>
-        <ul>
-            <li><a href="pdfs/June 2022/Physical Sciences P1 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 May-June 2022</a></li>
-            <li><a href="pdfs/June 2022/Physical Sciences P2 May-June 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 May-June 2022</a></li>
-        </ul>  
-    </section>
-
-    <section style="margin-top: -60px;">
-      <p style="font-weight: bold;">Below are the Memos for May-June 2022:</p>     
-      <p>Agricultural Sciences:</p>   
-      <ul>
-          <li><a href="pdfs/June 2022/Agricultural Sciences P1 May-June 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P1 May-June 2022</a></li>    
-          <li><a href="pdfs/June 2022/Agricultural Sciences P2 May-June 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 May-June 2022</a></li>
-      </ul>
-      <p>Geography:</p> 
-      <ul> 
-          <li><a href="pdfs/June 2022/Geography P1 May-June 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 May-June 2022</a></li>
-          <li><a href="pdfs/June 2022/Geography P2 May-June 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 May-June 2022</a></li>
-      </ul>
-      <p>Life Sciences:</p>
-      <ul>
-          <li><a href="pdfs/June 2022/Life Sciences P1 May-June 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 May-June 2022</a></li>
-          <li><a href="pdfs/June 2022/Life Sciences P2 May-June 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 May-June 2022</a></li>           
-      </ul>
-      <p>Mathematics:</p>
-      <ul>
-          <li><a href="pdfs/June 2022/Mathematics P1 May-June 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 May-June 2022</a></li>
-          <li><a href="pdfs/June 2022/Mathematics P2 May-June 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 May-June 2022</a></li>
-      </ul>
-      <p>Physical Sciences:</p>
-      <ul>
-          <li><a href="pdfs/June 2022/Physical Sciences P1 May-June 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 May-June 2022</a></li>
-          <li><a href="pdfs/June 2022/Physical Sciences P2 May-June 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 May-June 2022</a></li>
-      </ul>
-  </section>
-</div>
-  <div class="content-column">
- <section>          
-        <p style="font-weight: bold;">Below are the Question Papers for Nov 2022:</p> 
-        <p>Agricultural Sciences:</p>   
-        <ul>
-            <li><a href="pdfs/Nov 2022/Agricultural Sciences P1 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color: #000000; font-weight: bold;">Agricultural Sciences P1 Nov 2022</a></li>    
-            <li><a href="pdfs/Nov 2022/Agricultural Sciences P2 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 Nov 2022</a></li>
-        </ul>
-        <p>Geography:</p> 
-        <ul> 
-            <li><a href="pdfs/Nov 2022/Geography P1 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 Nov 2022</a></li>
-            <li><a href="pdfs/Nov 2022/Geography P2 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 Nov 2022</a></li>
-        </ul>
-        <p>Life Sciences:</p>
-        <ul>
-            <li><a href="pdfs/Nov 2022/Life Sciences P1 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 Nov 2022</a></li>
-            <li><a href="pdfs/Nov 2022/Life Sciences P2 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 Nov 2022</a></li>           
-        </ul>
-        <p>Mathematics:</p>
-        <ul>
-            <li><a href="pdfs/Nov 2022/Mathematics P1 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 Nov 2022</a></li>
-            <li><a href="pdfs/Nov 2022/Mathematics P2 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 Nov 2022</a></li>
-        </ul>
-        <p>Physical Sciences:</p>
-        <ul>
-            <li><a href="pdfs/Nov 2022/Physical Sciences P1 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 Nov 2022</a></li>
-            <li><a href="pdfs/Nov 2022/Physical Sciences P2 Nov 2022 Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 Nov 2022</a></li>
-        </ul>  
-    </section>
-
-    <section style="margin-top: -60px;">
-      <p style="font-weight: bold;">Below are the Memos for Nov 2022:</p>     
-      <p>Agricultural Sciences:</p>   
-      <ul>
-          <li><a href="pdfs/Nov 2022/Agricultural Sciences P1 Nov 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P1 Nov 2022</a></li>    
-          <li><a href="pdfs/Nov 2022/Agricultural Sciences P2 Nov 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Agricultural Sciences P2 Nov 2022</a></li>
-      </ul>
-      <p>Geography:</p> 
-      <ul> 
-          <li><a href="pdfs/Nov 2022/Geography P1 Nov 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P1 Nov 2022</a></li>
-          <li><a href="pdfs/Nov 2022/Geography P2 Nov 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Geography P2 Nov 2022</a></li>
-      </ul>
-      <p>Life Sciences:</p>
-      <ul>
-          <li><a href="pdfs/Nov 2022/Life Sciences P1 Nov 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P1 Nov 2022</a></li>
-          <li><a href="pdfs/Nov 2022/Life Sciences P2 Nov 2022 MG Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Life Sciences P2 Nov 2022</a></li>           
-      </ul>
-      <p>Mathematics:</p>
-      <ul>
-          <li><a href="pdfs/Nov 2022/Mathematics P1 Nov 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P1 Nov 2022</a></li>
-          <li><a href="pdfs/Nov 2022/Mathematics P2 Nov 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Mathematics P2 Nov 2022</a></li>
-      </ul>
-      <p>Physical Sciences:</p>
-      <ul>
-          <li><a href="pdfs/Nov 2022/Physical Sciences P1 Nov 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P1 Nov 2022</a></li>
-          <li><a href="pdfs/Nov 2022/Physical Sciences P2 Nov 2022 MG Afr & Eng.pdf" target="_blank" style="text-decoration: none; color:  #000000; font-weight: bold;">Physical Sciences P2 Nov 2022</a></li>
-      </ul>
-  </section>
-  </div>
-   
-
-<div id="2023" class="tab-content">
-  <h2>Resources for 2023</h2>
-  <p>Content for 2023 goes here.</p>
-</div>
-
-
-    <footer>
-        <p id="quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
-    </footer>
-   
-    <script src="script.js"></script>
-    
-</body>
+      <iframe
+        id="content-frame"
+        src="science_2021.html"
+        frameborder="0"
+        style="width: 100%; height: 150vh"
+      ></iframe>
+    </div>
+  </body>
 </html>

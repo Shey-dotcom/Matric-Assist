@@ -53,11 +53,6 @@ footer {
   font-style: italic;
 }
 
-.page-container {
-  max-height: 100vh; /* Full viewport height */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
 .tabs {
   display: flex;
   margin: 1rem 0;
