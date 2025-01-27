@@ -1,9 +1,11 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Navbar */
 nav {
   background-color: #333;
   padding: 1rem;
@@ -14,6 +16,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   background-color: #333;
 }
 
@@ -31,17 +34,19 @@ nav ul li a:hover {
   background-color: #575757;
 }
 
+/* Header */
 header {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   background-color: #f4f4f4;
 }
 
+/* Sections */
 section {
-  padding: 10px;
-  padding-bottom: 80px;
+  padding: 20px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
@@ -53,10 +58,12 @@ footer {
   font-style: italic;
 }
 
+/* Tabs */
 .tabs {
   display: flex;
   margin: 1rem 0;
 }
+
 .tabs button {
   flex: 1;
   padding: 1rem;
@@ -65,23 +72,68 @@ footer {
   cursor: pointer;
   font-size: 1rem;
 }
+
 .tabs button.active {
   background-color: #333;
   color: white;
 }
+
 .tab-content {
   display: none;
 }
+
 .tab-content.active {
   display: block;
 }
+
+/* Content Columns */
 .content-container {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow columns to stack on smaller screens */
 }
+
 .content-column {
   width: 30%;
 }
+
 .content-column ul {
   padding-left: 1.5rem;
+}
+
+iframe {
+  width: 100%;
+  height: 150vh;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Tablet */
+  .content-column {
+    width: 45%;
+  }
+
+  iframe {
+    height: 120vh; /* Adjust iframe height for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  nav ul {
+    flex-direction: column; /* Stack menu items vertically */
+  }
+
+  .content-column {
+    width: 100%; /* Make columns full-width */
+  }
+
+  iframe {
+    height: 100vh; /* Adjust iframe height for mobile */
+  }
+
+  footer {
+    font-size: 0.9rem; /* Slightly smaller footer text */
+  }
 }
