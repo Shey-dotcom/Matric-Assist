@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(() => {
     document.getElementById("quote").textContent = getRandomQuote();
-  }, 10000);
+  }, 120000); //gets a random qoute every 2 minutes
 });
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".tab-button");
