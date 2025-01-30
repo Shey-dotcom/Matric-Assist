@@ -214,6 +214,11 @@ iframe {
     height: 200vh; /* Adjust iframe height for mobile */
   }
 
+  section {
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+
   footer {
     font-size: 0.9rem; /* Slightly smaller footer text */
   }
