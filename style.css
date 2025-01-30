@@ -191,7 +191,7 @@ iframe {
 /* Image before "What We Offer" */
 .intro-image img {
   width: 100%;
-  max-height: 200px;
+  max-height: 400px;
   object-fit: cover;
   display: block;
   margin: 20px auto;
