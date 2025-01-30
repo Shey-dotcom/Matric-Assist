@@ -115,7 +115,7 @@ iframe {
   }
 
   iframe {
-    height: 120vh; /* Adjust iframe height for tablets */
+    height: 170vh; /* Adjust iframe height for tablets */
   }
 }
 
@@ -130,7 +130,7 @@ iframe {
   }
 
   iframe {
-    height: 100vh; /* Adjust iframe height for mobile */
+    height: 150vh; /* Adjust iframe height for mobile */
   }
 
   footer {
