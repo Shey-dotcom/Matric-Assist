@@ -100,12 +100,6 @@ section h2 {
   height: 200px;
   border: none;
 }
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #777;
-  font-size: 0.9em;
-}
 
 nav ul {
   list-style-type: none;
@@ -258,7 +252,7 @@ iframe {
 
   footer {
     font-size: 0.9rem; /* Slightly smaller footer text */
-    padding: 20px;
+    padding: 15px;
   }
 }
 
