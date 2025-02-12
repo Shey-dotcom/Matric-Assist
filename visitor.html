@@ -52,6 +52,12 @@
           document.getElementById("visitor-count").textContent = "Error";
           console.error("Error fetching visitor count:", error);
         });
+
+      const visitTime = new Date().toLocaleString(); // Get current date & time
+      console.log("New visit at:", visitTime);
+
+      // Store in local storage (optional)
+      localStorage.setItem("lastVisit", visitTime);
     </script>
   </body>
 </html>
