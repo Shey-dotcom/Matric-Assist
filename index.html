@@ -168,16 +168,5 @@
         setTimeout(showPopup2, 15000); // Show second popup 15 seconds after the first
       });
     </script>
-
-    <script>
-      fetch("https://api.countapi.xyz/hit/matric-assist.netlify.app/visits")
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById("visitor-count").innerText = data.value;
-        })
-        .catch((error) =>
-          console.error("Error fetching visitor count:", error)
-        );
-    </script>
   </body>
 </html>
