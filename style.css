@@ -226,6 +226,10 @@ iframe {
     width: 45%;
   }
 
+  .popup-notification {
+    top: 25%;
+  }
+
   iframe {
     height: 220vh; /* Adjust iframe height for tablets */
   }
@@ -235,6 +239,10 @@ iframe {
   /* Mobile */
   nav ul {
     flex-direction: column; /* Stack menu items vertically */
+  }
+
+  .popup-notification {
+    top: 30%;
   }
 
   .content-column {
