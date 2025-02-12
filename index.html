@@ -13,7 +13,7 @@
         <li><a href="commerce.html">Commerce</a></li>
         <li><a href="technical.html">Technical</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
 
@@ -63,6 +63,110 @@
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- First Popup Modal -->
+    <div
+      id="popup-notification"
+      style="
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        display: none;
+        z-index: 1000;
+      "
+    >
+      <h2>Welcome!</h2>
+      <p>You're now on our educational platform! 😊</p>
+      <p>
+        We updated the Contact Us Page. Use the email and the cellphone numbers
+        to communicate with us.
+      </p>
+      <button
+        onclick="closePopup1()"
+        style="
+          padding: 10px;
+          background-color: #333;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Close
+      </button>
+    </div>
+
+    <!-- Second Popup Modal -->
+    <div
+      id="popup-notification2"
+      style="
+        position: fixed;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        display: none;
+        z-index: 1000;
+      "
+    >
+      <h2>Will remove this Saturday</h2>
+      <p>
+        Sorry for the inconvenience, please inform other students. Thank you 😊
+      </p>
+      <button
+        onclick="closePopup2()"
+        style="
+          padding: 10px;
+          background-color: #333;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Close
+      </button>
+    </div>
+
+    <script>
+      // First popup functions
+      function showPopup1() {
+        let popup = document.getElementById("popup-notification");
+        popup.style.display = "block";
+        setTimeout(closePopup1, 15000); // Auto close after 15 seconds
+      }
+
+      function closePopup1() {
+        let popup = document.getElementById("popup-notification");
+        popup.style.display = "none";
+      }
+
+      // Second popup functions
+      function showPopup2() {
+        let popup = document.getElementById("popup-notification2");
+        popup.style.display = "block";
+        setTimeout(closePopup2, 10000); // Auto close after 10 seconds
+      }
+
+      function closePopup2() {
+        let popup = document.getElementById("popup-notification2");
+        popup.style.display = "none";
+      }
+
+      // Show both popups when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        showPopup1();
+        setTimeout(showPopup2, 15000); // Show second popup 15 seconds after the first
+      });
+    </script>
   </body>
 </html>
