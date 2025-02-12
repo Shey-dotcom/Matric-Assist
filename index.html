@@ -168,5 +168,11 @@
         setTimeout(showPopup2, 15000); // Show second popup 15 seconds after the first
       });
     </script>
+
+    <script>
+      fetch("https://api.countapi.xyz/hit/your-site-name/visits")
+        .then((response) => response.json())
+        .then((data) => console.log(`Page views: ${data.value}`));
+    </script>
   </body>
 </html>
